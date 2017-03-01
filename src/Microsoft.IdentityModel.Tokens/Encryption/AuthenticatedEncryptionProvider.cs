@@ -276,7 +276,7 @@ namespace Microsoft.IdentityModel.Tokens
             if (SecurityAlgorithms.Aes256CbcHmacSha512.Equals(algorithm, StringComparison.Ordinal))
                     return SecurityAlgorithms.HmacSha512;
 
-            throw LogHelper.LogExceptionMessage(new ArgumentException(nameof(algorithm), String.Format(CultureInfo.InvariantCulture, LogMessages.IDX10652, algorithm)));
+            throw LogHelper.LogExceptionMessage(new ArgumentException(String.Format(CultureInfo.InvariantCulture, LogMessages.IDX10652, algorithm), nameof(algorithm)));
         }
 
         /// <summary>
